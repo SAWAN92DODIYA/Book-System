@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+
+#parent
+{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 82vh;
+  
+}
+</style>
+</head>
+<body>
+<div id='parent'>
+<div>
+
+<h1>Authors Information</h1>
+<ul>
+    <% @authors.each do |author| %>
+        <li> 
+         
+          Name:  <%= link_to author.first_name , author%>
+        </li>
+      
+    <% end %>
+
+</ul>
+<br>
+<br>
+
+<%= link_to "Add New Author", new_author_path %>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

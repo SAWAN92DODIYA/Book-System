@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QueryInterface</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #body_part
+    {
+      background: #FFEAC5
+    }
+    </style>
+  </head>
+
+  <body>
+  <%= render "layouts/at_labbel" %>
+    <div id= 'body_part'>
+      <%= yield %>
+    </div>
+
+    <%= render "layouts/footer" %>
+  </body>
+</html>

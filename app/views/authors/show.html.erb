@@ -1,0 +1,19 @@
+<h1> <%= @author.first_name.capitalize + " " + @author.last_name.capitalize %> </h1>
+
+<p><%= @author.title %></p>
+<br>
+<%= link_to "Back to articles", authors_path %>
+<br>
+
+
+
+<br> 
+
+  <%= link_to "Update Author Details", edit_author_path(@author) %> 
+ <br> 
+ <br>  
+
+ <%= button_to "Destroy this author", @author, method: :delete %>	
+<%= link_to "Delete this Author" , @author ,data: { turbo_method: :delete } %>
+ 							
+<p><%= notice %> </p>
