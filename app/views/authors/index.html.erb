@@ -12,6 +12,17 @@ align-items: center;
 height: 82vh;
   
 }
+.add_author_button
+{
+  background: #C8A1E0;
+    height: 30px;
+    width: 150px;
+}
+.add_author_button:hover
+{
+  background: #674188;
+  
+}
 </style>
 </head>
 <body>
@@ -29,10 +40,12 @@ height: 82vh;
     <% end %>
 
 </ul>
+
+<br>
 <br>
 <br>
 
-<%= link_to "Add New Author", new_author_path %>
+<%= button_to "Add New Author" , new_author_path , method: :get ,class: "add_author_button" %>
 </div>
 </div>
 </body>

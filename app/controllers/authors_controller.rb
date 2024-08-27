@@ -13,22 +13,19 @@ class AuthorsController < ApplicationController
 
   def create
     @author = Author.new(author_params)
-    @author.save
-    if @author.save!
+   
+    if @author.save
       redirect_to @author , notice: "Author was Created."
     else 
-      render :new
+      render :new, status: :unprocessable_entity
     end 
   end
 
   def destroy
     @author = Author.find(params[:id])
     @author.destroy
-  #  if @author.destroy!
-    # redirect_to :index
-  #  else 
-  #   render show
-  #  end
+     redirect_to root_path , status: :see_other
+ 
   end
 
   def edit 

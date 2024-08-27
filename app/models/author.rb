@@ -6,6 +6,9 @@ class Author < ApplicationRecord
     validates :last_name , presence:true 
     validates :title, presence: true
 
-    scope :my_scope, -> { where(little: "my first book") }
+    scope :my_scope, -> { where(title: "my first book") }
    
 end
+
+
+
